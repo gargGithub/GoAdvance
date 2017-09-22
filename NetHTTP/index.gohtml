@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parsing Form</title>
+</head>
+<body>
+{{if .}}
+<main>
+    <p><strong>Variables names</strong>& <em>Values</em></p>
+    {{range $key,$value := .}}
+    <p><strong>{{$key}}</strong></p>
+    <ul>{{range $value}}<li><em>{{.}}</em></li>{{end}}</ul>
+    {{end}}
+
+</main>
+{{end}}
+
+<form action="/?fname=garg" method="post">
+    <input type="text" name="fname" placeholder="First Name" autofocus autocomplete="OFF">
+    <input type="submit" name="submit-btn" value="Click Here">
+
+</form>
+</body>
+</html>
