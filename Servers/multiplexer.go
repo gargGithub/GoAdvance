@@ -74,7 +74,7 @@ func mux(conn net.Conn, line string){
 }
 
 func index(conn net.Conn){
-	body:=`<html><head>INDEX<br><title>index page</title></head><body>
+	body:=`<html><head>INDEX<br><title>index.gohtml page</title></head><body>
 	<a href = "/">Index</a><br>
 	<a href = "/about">About</a><br>
 	<a href = "/contact">Contact</a><br>

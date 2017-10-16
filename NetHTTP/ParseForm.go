@@ -15,7 +15,7 @@ func(num hotdog) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 		log.Fatal(err)
 	}
 
-	err1:= tpl.ExecuteTemplate(w,"index.gohtml",req.Form)
+	err1:= tpl.ExecuteTemplate(w,"index.gohtml.gohtml",req.Form)
 	if(err1!=nil){
 		log.Fatal(err1)
 	}
@@ -24,7 +24,7 @@ func(num hotdog) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 var tpl *template.Template
 
 func init(){
-	tpl = template.Must(template.ParseFiles("index.gohtml"))
+	tpl = template.Must(template.ParseFiles("index.gohtml.gohtml"))
 }
 
 

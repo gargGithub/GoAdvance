@@ -1,0 +1,19 @@
+<html>
+<head></head>
+<body>
+<form method = "post">
+<input type = "email" name="username" placeholder = "username">
+<input type = "text" name="firstname" placeholder = "First Name">
+<input type = "text" name="lastname" placeholder = "Last Name">
+<input type ="submit">
+</form>
+{{if .FirstName}}
+User Name: {{.UserName}}<br>
+First Name: {{.FirstName}}<br>
+Last Name: {{.LastName}}<br>
+{{end}}
+<br>
+
+Go To <a href = "/portal">The Portal</a>
+</body>
+</html>

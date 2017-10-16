@@ -67,7 +67,7 @@ func main() {
 	  }
   }
 
-  fmt.Println("Choose index of your required word: ")
+  fmt.Println("Choose index.gohtml of your required word: ")
   var index int
   fmt.Scanln(&index)
   fmt.Print("You have choosen: ")
