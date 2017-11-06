@@ -10,7 +10,7 @@ import(
 func main() {
 
 	//establishing connection with database
-	db,err:= gorm.Open("mysql","root:password@tcp(127.0.0.1:3306)/gorm_db?charset=utf8&parseTime=True&loc=Local")
+		db,err:= gorm.Open("mysql","root:password@tcp(127.0.0.1:3306)/gorm_db?charset=utf8&parseTime=True&loc=Local")
 	if err!=nil{
 		log.Println("Error Connecting Database")
 	}
@@ -23,7 +23,7 @@ func main() {
 	//mapping structure(Owner) to database
 
 //	db.DropTableIfExists(&Owner{},&Book{},&Author{})  //to drop existing table
-	//db.CreateTable(&Owner{},&Book{},&Author{}) //passing empty interface; by default table name = owners
+	db.CreateTable(&Owner{},&Book{},&Author{}) //passing empty interface; by default table name = owners
 
 
     // to create record
